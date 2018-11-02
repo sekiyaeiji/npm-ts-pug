@@ -5,8 +5,3 @@ module.exports = function() {
   const sampleA = require('./_sample_a')
   sampleA('hoge')
 }
-
-
-
-
-
