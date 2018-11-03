@@ -1,4 +1,4 @@
-# npm-pug
+# npm-ts-pug
 
 # package
 
