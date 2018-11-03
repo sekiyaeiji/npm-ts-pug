@@ -1,7 +1,4 @@
 const webpack = require('webpack')
-const TSLintPlugin = require('tslint-webpack-plugin');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const PrettierPlugin = require('prettier-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const StyleLint = require('stylelint-webpack-plugin')
 
@@ -17,54 +14,16 @@ module.exports = [
       filename: '[name].js'
     },
     resolve: {
-      extensions: ['.ts', '.tsx', '.js'],
-      // plugins: [
-      //   new TsconfigPathsPlugin({
-      //     configFile: './conf/tsconfig.json'
-      //   })
-      // ]
+      extensions: ['.ts', '.js']
     },
     module: {
       rules: [
         {
           test: /\.ts?$/,
-          loader: 'ts-loader',
-          exclude: /node_modules/,
-          options: {
-            configFile: './conf/tsconfig.json'
-          }
-        },
-        {
-          test: /\.ts?$/,
-          enforce: 'pre',
-          use: [{
-            loader: 'tslint-loader',
-            options: {
-              configuration: {
-                rules: {
-                  quotemark: [true, 'double']
-                },
-                configFile: true,
-                tsConfigFile: './conf/tslint.json'
-              },
-            }
-          }]
-        },
+          loader: 'ts-loader'
+        }
       ]
-    },
-    plugins: [
-      // new PrettierPlugin({
-      //   printWidth: 120,
-      //   tabWidth: 2,
-      //   singleQuote: true,
-      //   trailingComma: 'all',
-      //   semi: false,
-      //   bracketSpacing: true
-      // }),
-      new TSLintPlugin({
-        files: ['./src/ts/**/*.ts']
-      })
-    ]
+    }
   },
   // css
   {
