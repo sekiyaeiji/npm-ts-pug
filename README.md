@@ -45,14 +45,14 @@
 編集対象は src/ 以下のみ
 
     src/
-      └ img/ : 画像
+      └ img/
       └ pug/
         └ data/ : data
         └ include/ : parts
         └ layout/ : layout
         └ page/ : page
-      └ ts/
       └ scss/
+      └ ts/
 
 
 # CSS開発方針
