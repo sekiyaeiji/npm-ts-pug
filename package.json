@@ -3,7 +3,6 @@
   "description": "",
   "version": "1.0.0",
   "main": "index",
-  "author": "",
   "license": "ISC",
   "scripts": {
     "build:image": "bin/build_image.sh",
@@ -38,11 +37,5 @@
     "uglifyjs": "^2.4.11",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "keywords": [],
-  "bugs": {}
+  }
 }
