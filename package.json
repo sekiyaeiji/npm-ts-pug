@@ -16,7 +16,9 @@
     "watch:scss": "chokidar src/scss/* -c 'npm run build:scss'",
     "watch:ts": "chokidar src/ts/* -c 'npm run build:ts'",
     "watch:server": "browser-sync start -s 'dist/' -f dist/* --port 8080 ",
-    "watch": "bin/build.sh && npm-run-all -p watch:*"
+    "watch": "bin/build.sh && npm-run-all -p watch:*",
+    "dev": "bin/build.sh && npm-run-all -p watch:*",
+    "start": "bin/build.sh && npm-run-all -p watch:*"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",
