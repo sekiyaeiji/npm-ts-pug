@@ -1,3 +1,5 @@
+const TSLintPlugin = require('tslint-webpack-plugin');
+
 module.exports = {
   mode: 'development',
   entry: {
@@ -17,5 +19,10 @@ module.exports = {
         loader: 'ts-loader'
       }
     ]
-  }
+  },
+  plugins: [
+      new TSLintPlugin({
+          files: ['./src/ts/**/*.ts']
+      })
+  ]
 }
