@@ -1,4 +1,6 @@
-const TSLintPlugin = require('tslint-webpack-plugin');
+const TSLintPlugin = require('tslint-webpack-plugin')
+const package = require('../package.json')
+const version = package.version
 
 module.exports = {
   mode: 'development',
@@ -6,7 +8,7 @@ module.exports = {
     common: './src/ts/common.ts'
   },
   output: {
-    path: __dirname + '/../dist/js',
+    path: __dirname + '/../dist/stat/' + version + '/js',
     filename: '[name].js'
   },
   resolve: {

@@ -1,15 +1,12 @@
 extend ../layout/default
 
-block page_data
-  - var siteTitle = ""
-  - var description = ""
-  - var keywords = ""
-  - var siteUrl = ""
-
 block body
-  h1 body
-  ul
-    for data in page_data
-      li
-        h2= data.title
-        p= data.text
+  body
+    h1 body
+    ul
+      for item in data.page_data
+        li
+          h2= item.title
+          p= item.text
+    div
+      img(src=`stat/${stat_version}/img/img_0287.jpg`, alt="", class="photo")
