@@ -15,10 +15,10 @@
     "watch:pug": "chokidar src/pug/* -c 'npm run build:pug'",
     "watch:scss": "chokidar src/scss/* -c 'npm run build:scss'",
     "watch:ts": "chokidar src/ts/* -c 'npm run build:ts'",
-    "watch:server": "browser-sync start -s 'dist/' -f dist/* --port 8080 ",
+    "watch:server": "browser-sync start -s 'dist/' -f dist/* --port 8001",
     "watch": "bin/build.sh && npm-run-all -p watch:*",
-    "dev": "bin/build.sh && npm-run-all -p watch:*",
-    "start": "bin/build.sh && npm-run-all -p watch:*"
+    "dev": "yarn watch",
+    "start": "yarn watch"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",
@@ -27,6 +27,7 @@
     "concat": "^1.0.3",
     "css-mqpacker": "^7.0.0",
     "imagemin-cli": "^3.0.0",
+    "jq": "^1.7.2",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.10.0",
     "npm-run-all": "^4.1.5",
@@ -41,6 +42,7 @@
     "typescript": "^3.1.6",
     "uglifyjs": "^2.4.11",
     "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "winston": "^3.2.1"
   }
 }
