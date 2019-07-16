@@ -26,7 +26,7 @@
     "chokidar-cli": "^1.2.0",
     "concat": "^1.0.3",
     "css-mqpacker": "^7.0.0",
-    "imagemin-cli": "^3.0.0",
+    "imagemin-cli": "^5.0.0",
     "jq": "^1.7.2",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.10.0",
